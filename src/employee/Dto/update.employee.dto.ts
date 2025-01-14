@@ -1,21 +1,15 @@
-import { IsOptional, IsString } from "class-validator";
+import { IsOptional, IsString } from 'class-validator';
 
-export class UpdateEmployeeDto{
+export class UpdateEmployeeDto {
+  @IsOptional()
+  @IsString()
+  gender: string;
 
+  @IsOptional()
+  @IsString()
+  email: string;
 
-    @IsOptional()
-    @IsString()
-    gender: string
-
-
-    @IsOptional()
-    @IsString()
-    email: string
-
-
-    constructor(partial: Partial<UpdateEmployeeDto>) {
-        Object.assign(this, partial);
-    }
-
-    
+  constructor(partial: Partial<UpdateEmployeeDto>) {
+    Object.assign(this, partial);
+  }
 }

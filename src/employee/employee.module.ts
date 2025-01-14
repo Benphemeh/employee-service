@@ -9,8 +9,18 @@ import { EmployeeRepository } from './employee.repository';
 import { EmployeeController } from './employee.controller';
 
 @Module({
-  imports: [MongooseModule.forFeature([{name: Employee.name, schema: EmployeeSchema}]), KafkaModule],
-  providers: [EmployeeService,EmployeeRepository, CreateConsumer, UpdateConsumer],
-  controllers: [EmployeeController]
+  imports: [
+    MongooseModule.forFeature([
+      { name: Employee.name, schema: EmployeeSchema },
+    ]),
+    KafkaModule,
+  ],
+  providers: [
+    EmployeeService,
+    EmployeeRepository,
+    CreateConsumer,
+    UpdateConsumer,
+  ],
+  controllers: [EmployeeController],
 })
 export class EmployeeModule {}
