@@ -16,15 +16,6 @@ export class EmployeeService {
     return this.employeeRepository.find({});
   }
 
-  // async createEmployee(firstName:string, lastName: string, age: number): Promise<Employee> {
-  //     return this.employeeRepository.create({
-  //         EmployeeId: uuidv4(),
-  //         firstName,
-  //         lastName,
-  //         age
-  //     })
-  // }
-
   // async createEmployee(createEmployeeDto: CreateEmployeeDto): Promise<Employee> {
   //     const createdEmployee = new this.employeeRepository(CreateEmployeeDto);
   //     return createdEmployee.save();
