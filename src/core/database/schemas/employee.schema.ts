@@ -12,7 +12,10 @@ export class Employee {
   lastName: string;
 
   @Prop()
-  age: number;
+  email: string;
+
+  @Prop()
+  password: string;
 }
 
 export const EmployeeSchema = SchemaFactory.createForClass(Employee);
