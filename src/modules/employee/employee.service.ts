@@ -27,8 +27,11 @@ export class EmployeeService {
 
   async updateEmployee(
     employeeId: string,
-    update: Partial<Employee>,
+    updateEmployeeDto: UpdateEmployeeDto,
   ): Promise<Employee> {
-    return this.employeeRepository.findOneAndUpdate({ employeeId }, update);
+    return this.employeeRepository.findOneAndUpdate(
+      { employeeId },
+      updateEmployeeDto,
+    );
   }
 }
