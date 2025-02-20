@@ -3,11 +3,7 @@ import { IsOptional, IsString } from 'class-validator';
 export class UpdateEmployeeDto {
   @IsOptional()
   @IsString()
-  gender: string;
-
-  @IsOptional()
-  @IsString()
-  email: string;
+  lastName: string;
 
   constructor(partial: Partial<UpdateEmployeeDto>) {
     Object.assign(this, partial);
