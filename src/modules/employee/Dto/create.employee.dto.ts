@@ -7,8 +7,9 @@ export class CreateEmployeeDto {
   @IsString()
   lastName: string;
 
+  @IsString()
   @IsNotEmpty()
-  age: number;
+  email: string;
 
   constructor(partial: Partial<CreateEmployeeDto>) {
     Object.assign(this, partial);
