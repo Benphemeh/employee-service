@@ -11,6 +11,10 @@ export class CreateEmployeeDto {
   @IsNotEmpty()
   email: string;
 
+  @IsString()
+  @IsNotEmpty()
+  password: string;
+
   constructor(partial: Partial<CreateEmployeeDto>) {
     Object.assign(this, partial);
   }
