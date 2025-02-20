@@ -1,7 +1,6 @@
 import { Body, Controller, Get, Param, Patch } from '@nestjs/common';
 import { EmployeeService } from './employee.service';
 import { Employee } from './schemas/employee.schema';
-import { CreateEmployeeDto } from './Dto/create.employee.dto';
 import { UpdateEmployeeDto } from './Dto/update.employee.dto';
 
 @Controller('Employee')
@@ -23,8 +22,8 @@ export class EmployeeController {
   @Patch(':id')
   async updateEmployee(
     @Param('id') id: string,
-    @Body() update: Partial<Employee>,
+    @Body() updateEmployeeDto: UpdateEmployeeDto,
   ) {
-    await this.employeeService.updateEmployee(id, update);
+    await this.employeeService.updateEmployee(id, updateEmployeeDto);
   }
 }
