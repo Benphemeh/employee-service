@@ -6,16 +6,16 @@ export type EmployeeDocument = Employee & Document;
 @Schema()
 export class Employee {
   @Prop()
-  id: string;
-
-  @Prop()
   firstName: string;
 
   @Prop()
   lastName: string;
 
   @Prop()
-  age: number;
+  email: string;
+
+  @Prop()
+  password: string;
 }
 
 export const EmployeeSchema = SchemaFactory.createForClass(Employee);
