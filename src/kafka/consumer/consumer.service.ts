@@ -1,13 +1,9 @@
 import { consumers } from 'stream';
-import {
-  Injectable,
-  OnApplicationShutdown,
-  OnModuleInit,
-} from '@nestjs/common';
+import { Injectable, OnApplicationShutdown } from '@nestjs/common';
 import {
   Consumer,
   ConsumerRunConfig,
-  ConsumerSubscribeTopic,
+  ConsumerSubscribeTopics,
   Kafka,
 } from 'kafkajs';
 
@@ -27,7 +23,7 @@ export class ConsumerService implements OnApplicationShutdown {
 
   async consume(
     groupId: string,
-    topic: ConsumerSubscribeTopic,
+    topic: ConsumerSubscribeTopics,
     config: ConsumerRunConfig,
   ) {
     const consumer: Consumer = this.kafka.consumer({ groupId: groupId });

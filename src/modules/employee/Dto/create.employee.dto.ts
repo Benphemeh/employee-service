@@ -15,7 +15,6 @@ export class CreateEmployeeDto {
   @IsNotEmpty()
   password: string;
 
-
   constructor(partial: Partial<CreateEmployeeDto>) {
     Object.assign(this, partial);
   }
