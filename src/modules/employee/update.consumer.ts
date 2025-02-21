@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { Consumer } from 'kafkajs';
 import { ConsumerService } from 'src/kafka/consumer/consumer.service';
 
 @Injectable()
@@ -9,7 +8,7 @@ export class UpdateConsumer {
   async onModuleInit() {
     this._consumer.consume(
       'update-client',
-      { topic: 'update-employee' },
+      { topics: ['update-employee'] },
       {
         eachMessage: async ({ topic, partition, message }) => {
           console.log({

@@ -7,7 +7,7 @@ export class CreateConsumer implements OnModuleInit {
   onModuleInit() {
     this.Consumer.consume(
       'create-client',
-      { topic: 'create-employee' },
+      { topics: ['create-employee'] },
       {
         eachMessage: async ({ topic, partition, message }) => {
           console.log({
