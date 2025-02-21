@@ -1,4 +1,3 @@
-import { consumers } from 'stream';
 import { Injectable, OnApplicationShutdown } from '@nestjs/common';
 import {
   Consumer,
