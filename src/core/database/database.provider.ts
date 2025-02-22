@@ -1,4 +1,4 @@
-import { MongooseModule } from '@nestjs/mongoose';
-import { databaseConfig } from './database.config';
+// import { MongooseModule } from '@nestjs/mongoose';
+// import { databaseConfig } from './database.config';
 
-export const DatabaseProvider = MongooseModule.forRoot(databaseConfig.uri);
+// export const DatabaseProvider = MongooseModule.forRoot(databaseConfig.uri);
