@@ -4,7 +4,7 @@ export const UserSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
   email: String,
-  password: String
+  password: String,
 });
 
 export interface User extends mongoose.Document {
