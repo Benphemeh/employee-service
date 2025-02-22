@@ -6,6 +6,7 @@ import { KafkaModule } from './kafka/kafka.module';
 import { EmployeeModule } from './modules/employee/employee.module';
 import * as dotenv from 'dotenv';
 import { DatabaseModule } from './core/database/database.module';
+import { DatabaseConfig } from './core/database/database.config';
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ dotenv.config();
     MongooseModule.forRoot(process.env.URI),
     KafkaModule,
     EmployeeModule,
+    DatabaseConfig,
     DatabaseModule,
   ],
   controllers: [AppController],
