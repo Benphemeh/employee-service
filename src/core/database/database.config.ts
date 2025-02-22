@@ -3,4 +3,6 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-export const DatabaseConfig = MongooseModule.forRoot(process.env.MONGO_URI);
+export const DatabaseConfig = MongooseModule.forRoot(process.env.URI, {
+  uri: process.env.URI,
+});
